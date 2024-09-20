@@ -4,8 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo Home</title>
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>Well come to HOme Page</h1>
+    <header></header>
+    <main class="flex">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- available balance -->
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="balance" class="stat-value">9400</div>
+                <div class="stat-desc">available balance</div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <!-- user actions button -->
+            <div>
+              <button id="add-money-form-btn" class="btn btn-lg">Add Money</button>
+              <button id="cash-out-form-btn" class="btn btn-lg">Cash out</button>
+            </div>
+            <div class="divider"></div>
+            <!-- add money form -->
+            <div
+            id="add-money-form"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="added amount"
+                    class="input input-bordered"
+                    id="add-amount"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Your pin"
+                    class="input input-bordered"
+                    id="pin"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="add-money-button" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Cash out -->
+            <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="cash-out-amount"
+                    class="input input-bordered"
+                    id="cash-out-amount"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Your pin"
+                    class="input input-bordered"
+                    id="cash-out-pin"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out-button" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/home.js"></script>
+    <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
   </body>
 </html>
